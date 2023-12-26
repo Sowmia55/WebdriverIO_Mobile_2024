@@ -1,7 +1,8 @@
 import { config } from './wdio.shared.conf';
+import 'dotenv/config';
 
-config.user = 'sowmiab_q5oIf4';
-config.key = 'Uvj6RSGzkcnFvQ4WQjMo';
+config.user = process.env.BROWSERSTACK_USERNAME;
+config.key = process.env.BROWSERSTACK_PASSWORD;
 config.specs = [
     './integration/login.spec.ts'
 ];

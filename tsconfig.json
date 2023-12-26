@@ -25,6 +25,6 @@
     },
     "include": [
         "integration",
-        "wdio.conf.ts"
+        "./../config/**/wdio.conf.ts"
     ]
 }

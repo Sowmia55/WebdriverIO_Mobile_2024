@@ -14,5 +14,9 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.202",
+    "dotenv": "^16.3.1"
   }
 }
