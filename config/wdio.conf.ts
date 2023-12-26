@@ -6,26 +6,26 @@ import sample from 'lodash/sample';
 const config = baseConfig;
 
 const appiumPlatformName = process.env.APPIUM_PLATFORM_NAME || IOS;
-// const randomDevice = sample(
-//     supportedDevices.filter((device) => {
-//         let isValid =
-//             device.platform.toUpperCase() === appiumPlatformName.toUpperCase();
-//         if (
-//             !process.env.APPIUM_DEVICE_NAME &&
-//             process.env.APPIUM_PLATFORM_VERSION
-//         ) {
-//             isValid = device.os === process.env.APPIUM_PLATFORM_VERSION;
-//         }
-//         return isValid;
-//     })
-// );
-// const appiumDeviceName = process.env.APPIUM_DEVICE_NAME || randomDevice?.device;
-// const appiumPlatformVersion = process.env.APPIUM_DEVICE_NAME
-//     ? process.env.APPIUM_PLATFORM_VERSION
-//     : randomDevice?.os;
+const randomDevice = sample(
+    supportedDevices.filter((device) => {
+        let isValid =
+            device.platform.toUpperCase() === appiumPlatformName.toUpperCase();
+        if (
+            !process.env.APPIUM_DEVICE_NAME &&
+            process.env.APPIUM_PLATFORM_VERSION
+        ) {
+            isValid = device.os === process.env.APPIUM_PLATFORM_VERSION;
+        }
+        return isValid;
+    })
+);
+const appiumDeviceName = process.env.APPIUM_DEVICE_NAME || randomDevice?.device;
+const appiumPlatformVersion = process.env.APPIUM_DEVICE_NAME
+    ? process.env.APPIUM_PLATFORM_VERSION
+    : randomDevice?.os;
 
-const appiumDeviceName = process.env.APPIUM_DEVICE_NAME;
-const appiumPlatformVersion = process.env.APPIUM_DEVICE_NAME;
+// const appiumDeviceName = process.env.APPIUM_DEVICE_NAME;
+// const appiumPlatformVersion = process.env.APPIUM_PLATFORM_VERSION;
 const iosCapabilities = {
     ...baseCapabilities,
     'bstack:options': {

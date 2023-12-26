@@ -30,7 +30,6 @@ export const supportedDevices: SupportedDeviceList[] = [
     },
     {
         device: 'Samsung Galaxy S23 Ultra',
-        os: '13',
         platform: ANDROID
     },
     {
