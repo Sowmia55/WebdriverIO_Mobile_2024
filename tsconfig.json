@@ -25,6 +25,7 @@
         "noFallthroughCasesInSwitch": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true
     },
     "include": [
         "src/integration/*.spec.ts",

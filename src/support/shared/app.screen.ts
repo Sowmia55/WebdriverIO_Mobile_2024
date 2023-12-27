@@ -1,10 +1,10 @@
 import { injectable } from 'inversify';
 import { ChainablePromiseElement } from 'webdriverio';
-import logger from '@wdio/logger';
+// import logger from '@wdio/logger';
 
 @injectable()
 export abstract class AppScreen {
-    protected log = logger('webdriver');
+    // protected log = logger('webdriver');
     abstract getWaitElement(): ChainablePromiseElement<WebdriverIO.Element>;
     getSnapshotDepthIOS() {
         return 50;
@@ -81,7 +81,7 @@ export abstract class AppScreen {
         yPercent: number) {
         const elementReact = await driver.getElementRect(await element.elementId);
         const startPoint = elementReact.x + (elementReact.width * xPercent) / 100;
-        const endPoint = elementReact.x + (elementReact.height * xPercent) / 100;
+        const endPoint = elementReact.x + (elementReact.height * yPercent) / 100;
         driver.touchPerform([{
             action: 'press',
             options: {
