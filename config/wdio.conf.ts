@@ -24,8 +24,6 @@ const appiumPlatformVersion = process.env.APPIUM_DEVICE_NAME
     ? process.env.APPIUM_PLATFORM_VERSION
     : randomDevice?.os;
 
-// const appiumDeviceName = process.env.APPIUM_DEVICE_NAME;
-// const appiumPlatformVersion = process.env.APPIUM_PLATFORM_VERSION;
 const iosCapabilities = {
     ...baseCapabilities,
     'bstack:options': {
@@ -36,7 +34,7 @@ const iosCapabilities = {
     platformName: 'ios',
     'appium:automationName': 'XCUITest',
     'appium:app':
-        process.env.APPIUM_APP || 'digital/f-o-c-i-ios-latest',
+        process.env.APPIUM_APP || 'bs://a60bf534828f7332e8063376350c907a00f25c5d',
     'appium:deviceName': appiumDeviceName,
     'appium:platformVersion': appiumPlatformVersion,
     'appium:settings[snapshotMaxDepth]': 62,
@@ -54,7 +52,7 @@ const androidCapabilities = {
     platformName: 'android',
     'appium:automationName': 'UiAutomator2',
     'appium:app':
-        process.env.APPIUM_APP || 'digital/f-o-c-i-android-latest',
+        process.env.APPIUM_APP || 'bs://f7fbe4f4a34af59ef1aa2c5e3615dc99b1907cad',
     'appium:deviceName': appiumDeviceName,
     'appium:platformVersion': appiumPlatformVersion,
 };
