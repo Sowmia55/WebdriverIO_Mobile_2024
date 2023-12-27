@@ -46,4 +46,14 @@ Ok to proceed? (y) Y
 6. .apk and .ipa under app folder /
 7. "userName": "standard_user",
    "password": "secret_sauce",
+   --config files edited
 8. npm install --save @types/lodash
+   --folder section creation
+9. npm install inversify
+10. npm install reflect-metadata
+11. https://webdriver.io/docs/selectors/#mobileselectors
+12. Babel to use nextgen JS features, while compiling will take latest supported version - https://webdriver.io/docs/babel/
+13. npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/register
+14. linter - highlights error - https://www.npmjs.com/package/eslint-plugin-wdio
+15. npm i eslint --save-dev
+16. npm install eslint-plugin-wdio --save-dev

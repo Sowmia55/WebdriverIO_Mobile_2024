@@ -1,5 +1,11 @@
 {
   "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/register": "^7.22.15",
+    "@types/jquery": "^3.5.29",
+    "@types/lodash": "^4.14.202",
     "@wdio/appium-service": "^8.27.0",
     "@wdio/browserstack-service": "^8.27.0",
     "@wdio/cli": "^8.27.0",
@@ -9,14 +15,18 @@
     "appium": "^2.3.0",
     "appium-uiautomator2-driver": "^2.35.0",
     "appium-xcuitest-driver": "^5.12.2",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-wdio": "^8.24.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "@types/lodash": "^4.14.202",
-    "dotenv": "^16.3.1",
     "wdio": "^6.0.1"
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts"
   },
-  "dependencies": {}
+  "dependencies": {
+    "inversify": "^6.0.2",
+    "reflect-metadata": "^0.2.1"
+  }
 }

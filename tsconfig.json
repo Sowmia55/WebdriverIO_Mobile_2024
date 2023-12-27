@@ -12,7 +12,8 @@
             "@wdio/globals/types",
             "expect-webdriverio",
             "@wdio/mocha-framework",
-            "@wdio/appium-service"
+            "@wdio/appium-service",
+            "jquery"
         ],
         "skipLibCheck": true,
         "noEmit": true,
@@ -26,7 +27,10 @@
         "allowSyntheticDefaultImports": true,
     },
     "include": [
-        "integration",
-        "../config/**/wdio.conf.ts"
+        "src/integration/*.spec.ts",
+        "config/wdio.conf.ts"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }

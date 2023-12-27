@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 export const baseConfig: WebdriverIO.Config = {
-    specs: ['../integration/*.spec.ts'],
+    specs: ['../src/integration/*.spec.ts'],
     capabilities: [],
     maxInstances: 10,
     logLevel: 'info',
