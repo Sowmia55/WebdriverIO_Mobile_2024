@@ -53,7 +53,11 @@ Ok to proceed? (y) Y
 10. npm install reflect-metadata
 11. https://webdriver.io/docs/selectors/#mobileselectors
 12. Babel to use nextgen JS features, while compiling will take latest supported version - https://webdriver.io/docs/babel/
+    -- npm i --save-dev @types/jquery
+    -- npm i dotenv
 13. npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/register
 14. linter - highlights error - https://www.npmjs.com/package/eslint-plugin-wdio
 15. npm i eslint --save-dev
 16. npm install eslint-plugin-wdio --save-dev
+17. run command - npx wdio config/wdio.conf.ts --spec ./src/integration/login.spec.ts
+18. https://github.com/dilpreetj/webdriverio-appium-course
